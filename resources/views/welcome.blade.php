@@ -21,9 +21,14 @@
         </style>
     </head>
     <body class="antialiased">
+<<<<<<< HEAD
         <h1>khawla's code</h1>
         <h4>!!!!!!!!!!!1</h4>
+=======
+>>>>>>> 1aa0436dd97e48ddec9fe3f8e5da18e72b856916
 
+        <h1>New world</h1>
+      
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
