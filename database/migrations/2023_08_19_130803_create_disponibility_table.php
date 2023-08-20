@@ -13,14 +13,12 @@ class CreateDisponibilityTable extends Migration
     public function up()
     {
         Schema::create('disponibility', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('property_id'); // Clé étrangère pour la propriété
+            $table->id('id_desponibility');
             $table->date('date');
             $table->boolean('isDisponible');
             $table->timestamps();
 
-            // Clé étrangère
-            $table->foreign('property_id')->references('id')->on('properties');
+    
         });
     }
 

@@ -14,16 +14,12 @@ class CreateNoticesTable extends Migration
     public function up()
     {
         Schema::create('notices', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('user_id'); // Clé étrangère
-            $table->unsignedBigInteger('property_id'); // Clé étrangère
+            $table->id('notice_id');
             $table->text('comment');
             $table->unsignedTinyInteger('rating'); // Peut-être ajusté en fonction de la plage de notation souhaitée
             $table->timestamps();
 
-            // Clés étrangères
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('property_id')->references('id')->on('properties');
+       
         });
     }
 

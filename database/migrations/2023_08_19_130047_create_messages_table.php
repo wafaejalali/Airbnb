@@ -13,17 +13,11 @@ class CreateMessagesTable extends Migration
     public function up()
     {
         Schema::create('messages', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('user_id'); // Clé étrangère pour l'utilisateur
-            $table->unsignedBigInteger('from'); // Clé étrangère pour l'expéditeur
-            $table->unsignedBigInteger('to'); // Clé étrangère pour le destinataire 
+            $table->id('message_id');
+            $table->unsignedBigInteger('from');
+            $table->unsignedBigInteger('to');
             $table->text('content');
             $table->timestamps();
-
-            // Clés étrangères
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('from')->references('id')->on('users');
-            $table->foreign('to')->references('id')->on('users');
         });
     }
 
