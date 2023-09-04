@@ -17,6 +17,7 @@ class CreateMessagesTable extends Migration
             $table->unsignedBigInteger('from');
             $table->unsignedBigInteger('to');
             $table->text('content');
+            $table->boolean('type');
             $table->timestamps();
         });
     }
